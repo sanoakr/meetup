@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>スケジュール調整アプリ</title>
+    <!-- Bootstrap CSS オンライン参照 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">スケジュール調整アプリへようこそ</h1>
+        <p>このアプリでは、メンバー間で簡単に会議のスケジュール調整ができます。</p>
+        <form action="/create_group" method="post">
+            <div class="form-group">
+                <label for="description">グループの説明:</label>
+                <textarea name="description" id="description" class="form-control" rows="3" placeholder="グループの説明を入力してください。"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">グループを作成</button>
+        </form>
+    </div>
+</body>
+</html>

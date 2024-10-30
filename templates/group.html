@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>グループスケジュール</title>
+    <!-- Bootstrap CSS オンライン参照 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- FullCalendar CSS オンライン参照 -->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <style>
+        .group-description {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">グループスケジュール</h1>
+        <p>以下のURLを共有して、他のメンバーとスケジュールを調整してください。</p>
+        <p><a href="{{ group_url }}">{{ group_url }}</a></p>
+        
+        {% if description %}
+        <div class="group-description">
+            <h3>グループの説明</h3>
+            <p>{{ description }}</p>
+        </div>
+        {% endif %}
+
+        <p>以下のカレンダーから都合の良い日時を選択してください。</p>
+        <label for="member_name">名前：</label>
+        <input type="text" id="member_name" class="form-control" placeholder="あなたの名前を入力">
+        <div id='calendar'></div>
+        
+        <h2 class="mt-5">最終候補日</h2>
+        <ul id="final_candidates" class="candidate-list"></ul>
+    </div>
+    <!-- 必要なスクリプトの読み込み -->
+    <!-- FullCalendar JS オンライン参照 -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <!-- FullCalendar 日本語ロケール -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales-all.global.min.js'></script>
+    <!-- main.js -->
+    <script>
+        var group_id = "{{ group_id }}";
+    </script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+/* カスタムスタイルをここに記述します */
+
+/* カレンダーのコンテナのスタイル */
+#calendar {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+/* イベントのスタイルをカスタマイズ */
+.fc-event {
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+/* 名前入力フィールドのスタイル */
+#member_name {
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+/* 最終候補日のリストスタイル */
+.candidate-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.candidate-list li {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.candidate-list li.highlight {
+    font-weight: bold;
+    color: #d9534f; /* ブートストラップのdanger色 */
+}
+
+/* 全体のテキストスタイル */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* ヘッダーのスタイル */
+h1, h2, h3 {
+    margin-top: 30px;
+}
+
+/* グループの説明セクション */
+.group-description {
+    margin-bottom: 30px;
+}
