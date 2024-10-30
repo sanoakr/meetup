@@ -3,5 +3,6 @@
 pip3 install flask
 ```
 ```
+cd meetup
 flask run
 ```
